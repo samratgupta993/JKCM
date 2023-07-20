@@ -1,0 +1,28 @@
+<header>
+    <div class="headingContainer">
+        <img class="logo" src="./assets/Logo.png" alt="jkcm-logo" />
+        <div class="heading">
+            <h1>JKCM ASSOCIATES</h1>
+            <h3>A Complete Online Software</h3>
+        </div>
+        <div class="dock">
+            <p-dock [model]="menuItems" [position]="'top'">
+                <ng-template pTemplate="item" let-item>
+                    <span>{{item.label}}</span>
+                </ng-template>
+            </p-dock>
+        </div>
+    </div>
+    <div class="details">
+        <div class="contacts">
+            Get in touch!
+            <a href="#">(+91) 7060108433</a> | 
+            <a href="#">jkcmassociate@gmail.com</a> | 
+            <a href="#">Live Chat</a>
+        </div>
+        <div class="links">
+            <a href="#" class="anyDesk"><img src="./assets/AnyDesk.svg" alt="anydesk" /></a>
+            <a href="#" class="login">Login</a>
+        </div>
+    </div>
+</header>

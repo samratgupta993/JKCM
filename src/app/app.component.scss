@@ -1,0 +1,176 @@
+.upperSection{
+    background: url('../assets/back.webp') fixed;
+    background-size: cover;
+    height: 100vh;
+    .backDrop{
+        width: 100%;
+        height: 70vh;
+        background-color: #000a;
+        position: relative;
+        top: calc(50% - 30vh);
+        margin: auto;
+        .banner{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 95%;
+            height: 80%;
+            background-color: #fff3;
+            position: absolute;
+            top: 10%;
+            left: 2.5%;
+            .banner-image{
+                height: 80%;
+            }
+            .content{
+                h2{
+                    color: #dac71e;
+                    font-family: 'Pacifico', cursive;
+                    font-variant-caps: petite-caps;
+                    font-size: 2.5rem;
+                }
+                h3{
+                    color: #fff;
+                    font-size: 2rem;
+                }
+                h1{
+                    color: #1c87bd;
+                    font-family: 'Pacifico', cursive;
+                    font-size: 3rem;
+                }
+                p{
+                    color: red;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    padding-bottom: 2px;
+                    position: relative;
+                    width: max-content;
+                    overflow: hidden;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        display: inline-block;
+                        width: 100%;
+                        height: 3px;
+                        background-color: red;
+                        bottom: 0;
+                        left: 100%;
+                        animation-name: bottomLine;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cards{
+    width: 100%;
+    height: 120vh;
+    background: url('../assets/scroll-back.avif') fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    &>h1{
+        position: absolute;
+        font-variant-caps: small-caps;
+        font-size: 4rem;
+        bottom: 200px;
+        left: 20px;
+        width: 500px;
+    }
+    .scrollContainer{
+        height: 230%;
+        width: 30%;
+        overflow: auto;
+        transform: rotate(-70deg) translate(900px, 420px);
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .scroller{
+            padding: 100% 0;
+            width: 100%;
+            height: auto;
+            overflow: visible;
+            .card{
+                background-color: #000a;
+                width: 75%;
+                height: 420px;
+                margin: 70% auto;
+                transform: rotate(90deg);
+                transition: .4s;
+                padding: 20px 30px;
+                &:hover{
+                    transform: rotate(65deg);
+                }
+                h1{
+                    color: #dac71e;
+                }
+                li{
+                    color: #d1d1d1;
+                    list-style-type: '\22D7';
+                    font-size: 17px;
+                    &::marker{
+                        padding-right: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+.clients{
+    padding: 150px 0 100px 0;
+    background: url('../assets/client-back.jpeg') fixed;
+    background-size: cover;
+    overflow: auto;
+    h1{
+        text-align: center;
+        font-variant-caps: small-caps;
+        font-size: 3rem;
+    }
+    .testimony{
+        width: 80%;
+        height: 300px;
+        background-color: #000a;
+        margin: 50px auto;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        p{
+            color: #fff;
+            font-size: 20px;
+            font-family: 'comic sans ms';
+        }
+        img{
+            height: 80%;
+            border-radius: 50%;
+        }
+        &.reverse{
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes bottomLine{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -100%;
+    }
+}

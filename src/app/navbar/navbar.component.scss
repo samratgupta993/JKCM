@@ -1,0 +1,109 @@
+header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, transparent, #00000088, #000000aa);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    .headingContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 0 10px;
+        height: 100%;
+    }
+    img.logo{
+        height: calc(100% - 20px);
+        background: white;
+        border-radius: 50%;
+        padding: 2px;
+    }
+    .heading{
+        // width: max-content;
+        h1{
+            color: #dac71e;
+            margin: 0;
+        }
+        h3{
+            color: #a0a0a0;
+            font-variant-caps: small-caps;
+            margin: 0;
+        }
+    }
+    .dock{
+        ::ng-deep .p-dock-list-container{
+            height: 50px;
+            a{
+                color: #fff;
+                width: max-content;
+                text-decoration: none;
+            }
+        }
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 100%;
+        justify-content: space-evenly;
+        padding: 0 10px;
+        .contacts{
+            color: #dac71e;
+            font-weight: 600;
+            a{
+                color: #dac71e;
+            }
+        }
+        .links{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 0 15px;
+            .anyDesk{
+                width: 33px;
+                display: inline-block;
+                overflow: hidden;
+                transition: .3s;
+                background-color: #fff;
+                border-radius: 50px;
+                padding-top: 2px;
+                &:hover{
+                    width: 150px;
+                    border-radius: 20px;
+                }
+                img{
+                    height: 25px;
+                }
+            }
+            .login{
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                position: relative;
+                padding-bottom: 2px;
+                display: inline-flex;
+                justify-content: center;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color: #fff;
+                    display: inline-block;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    justify-self: center;
+                    transition: .3s;
+                }
+                &:hover{
+                    &::before{
+                        width: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
